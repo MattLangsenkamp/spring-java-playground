@@ -1,0 +1,6 @@
+http GET http://localhost:8080/api/content
+
+http POST http://localhost:8080/api/content id=2 title='my second blog' desc='my second gh' status=IDEA contentType=ARTICLE dateCreated=2023-02-13T10:25:02.838496 url=''
+
+###
+http PUT http://localhost:8080/api/content id=2 title='Wooooow' desc='my second gh' status=IDEA contentType=ARTICLE dateCreated=2023-02-13T10:25:02.838496 url=''
