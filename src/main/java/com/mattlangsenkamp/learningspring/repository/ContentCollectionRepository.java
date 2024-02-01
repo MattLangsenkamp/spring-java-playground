@@ -6,7 +6,6 @@ import jakarta.annotation.PostConstruct;
 
 import java.util.List;
 import java.util.Optional;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -36,6 +35,10 @@ public class ContentCollectionRepository {
 
     public boolean existsById(Integer id) {
         return contentList.stream().filter(c -> c.id().equals(id)).findAny().isPresent();
+    }
+
+    public void delete(Integer id) {
+        contentList.removeIf(c -> c.id().equals(id));
     }
 
     @PostConstruct
